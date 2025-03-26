@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSearch - Smart Movie Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-film"></i> CineSearch</h1>
+            <p>Discover movies with intelligent recommendations</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="search-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Enter movie title...">
+                <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <div class="filters">
+                <select id="yearFilter">
+                    <option value="">All Years</option>
+                </select>
+                <select id="typeFilter">
+                    <option value="">All Types</option>
+                    <option value="movie">Movie</option>
+                    <option value="series">TV Series</option>
+                    <option value="episode">Episode</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Searching for movies...</p>
+        </div>
+
+        <div id="resultsContainer">
+            <div id="mainResult" class="movie-detail"></div>
+            <div class="recommendations-section">
+                <h2><i class="fas fa-lightbulb"></i> Recommended Based on Your Search</h2>
+                <div id="recommendations" class="recommendations-grid"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 CineSearch. All movie data provided by OMDB API.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
